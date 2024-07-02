@@ -1,0 +1,47 @@
+const demoEnqs = [
+  {
+    _id: "667595289f30b44aa2a7ec11",
+    preferredName: "Alex",
+    mobile: "07123456789",
+    email: "alex@email.com",
+    postcode: "A12 3BC",
+    testPreparation: true,
+    skillsImprovement: false,
+    enqMessage: "Hi, I would like to start lessons in July.",
+    enqDate: "2024-06-20T20:42:56.922Z",
+    replied: false,
+    replyDate: null,
+    replyMessage: "",
+  },
+  {
+    _id: "667595289f30b44aa2a7ec12",
+    preferredName: "Bowie",
+    mobile: "07234567890",
+    email: "bowie@email.com",
+    postcode: "B45 6CD",
+    testPreparation: false,
+    skillsImprovement: true,
+    enqMessage:
+      "I haven't driven for years so I want to take skills improvement lessons.",
+    enqDate: "2024-06-21T20:42:56.922Z",
+    replied: false,
+    replyDate: null,
+    replyMessage: "",
+  },
+  {
+    _id: "667595289f30b44aa2a7ec13",
+    preferredName: "Chris",
+    mobile: "07345678901",
+    email: "chris@email.com",
+    postcode: "C78 9DE",
+    testPreparation: true,
+    skillsImprovement: false,
+    enqMessage: "My test will be held in August and I want to take mock tests.",
+    enqDate: "2024-06-22T20:42:56.922Z",
+    replied: false,
+    replyDate: null,
+    replyMessage: "",
+  },
+];
+
+export default demoEnqs;
