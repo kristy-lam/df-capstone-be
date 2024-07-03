@@ -260,6 +260,10 @@ Manage Enquiries - "/enq"
   - [x] renders SuccessDiv and the submit button disabled when the enquiry is successfully added
   - [x] renders error message and the submit button disabled when the enquiry cannot be added
 
+- EnqDeleteModal tests
+
+  - [x] renders the modal with the correct index
+
 - EnqSec tests
 
   - [x] renders testEnq when enquiries are available
@@ -292,6 +296,8 @@ Manage Enquiries - "/enq"
   - [x] renders normally when an enquiry is available
   - [x] renders replied status header when the enquiry has already been replied
   - [x] renders not yet replied status header when the enquiry has not been replied
+  - [x] opens update modal when update progress button is clicked
+  - [x] opens delete modal when delete button is clicked
 
 - ErrorDiv tests
 
