@@ -63,13 +63,13 @@ Kristy will be able to log into the web application as an admin. After logging i
 
 The user interface will be responsive to mobile, tablet and desktop screens. The pages included will be "Home", "Lessons", "Login" and "Enquiries". The wire frames below roughly illustrated how the pages should look like:
 
-![Wire Frame - Home](../img/wireframe-home.png)
+![Wire Frame - Home](./img/wireframe-home.png)
 
-![Wire Frame - Lessons](../img/wireframe-lessons.png)
+![Wire Frame - Lessons](./img/wireframe-lessons.png)
 
-![Wire Frame - Login](../img/wireframe-login.png)
+![Wire Frame - Login](./img/wireframe-login.png)
 
-![Wire Frame - Enquiries](../img/wireframe-enquiries.png)
+![Wire Frame - Enquiries](./img/wireframe-enquiries.png)
 
 ## Architecture
 
@@ -79,7 +79,7 @@ A visitor will be able to make POST requests by submitting the contact form, whi
 
 The diagram below shows the architecture and the data flow of the application:
 
-![alt text](../img/architecture.png)
+![Architecture](./img/architecture.png)
 
 ## RESTful Routing
 
