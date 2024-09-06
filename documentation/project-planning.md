@@ -10,13 +10,21 @@
 
 ![Routing diagram - authenticate user](./img/routing-auth.png)
 
-![Routing diagram - add an enquiry](./img/routing-add-enq.png)
+![Routing diagram - add enquiry](./img/routing-add-enq.png)
 
 ![Routing diagram - get enquiries](./img/routing-get-enqs.png)
 
 ![Routing diagram - update enquiry](./img/routing-update-enq.png)
 
 ![Routing diagram - delete enquiry](./img/routing-delete-enq.png)
+
+![Routing diagram - add customer](./img/routing-add-customer.png)
+
+![Routing diagram - get customers](./img/routing-get-customers.png)
+
+![Routing diagram - update enquiry](./img/routing-update-customer.png)
+
+![Routing diagram - delete customer](./img/routing-delete-customer.png)
 
 ## Component Trees of Frontend React JS Vite Site
 
@@ -72,7 +80,7 @@ Manage Enquiries - "/enq"
 - sendAddEnqRes tests
   - [x] should return a 201 status and the enquiry when a valid enquiry is added
   - [x] should return a 400 status when an invalid enquiry is sent
-  - [x] should return a 500 status when addEnquiry throws an error
+  - [x] should return a 500 status when addEnq throws an error
 - sendGetEnqsRes tests
   - [x] should return a 200 status and all enquiries
   - [x] should return a 404 status when there is no enquiry
@@ -84,7 +92,41 @@ Manage Enquiries - "/enq"
 - sendDeleteEnqRes tests
   - [x] should send a 200 status when a valid ID is provided
   - [x] should return a 404 status when an enquiry is not found
-  - [x] should send a 500 status when updateEnq throws an error
+  - [x] should send a 500 status when deleteEnq throws an error
+
+**Customers services tests**
+
+- addCustomer tests
+  - [x] should add a valid customer
+  - [x] should throw an error when save fails
+- getCustomers tests
+  - [x] should get all customers
+  - [x] should throw an error when there is no customer
+- updateCustomer tests
+  - [x] should update a customer
+  - [x] should throw an error when invalid ID is provided
+- deleteCustomer tests
+  - [x] should delete a customer
+  - [x] should throw an error when invalid ID is provided
+
+**Customers controller tests**
+
+- sendAddCustomerRes tests
+  - [x] should return a 201 status and the enquiry when a valid customer is added
+  - [x] should return a 400 status when an invalid customer is sent
+  - [x] should return a 500 status when addCustomer throws an error
+- sendGetCustomersRes tests
+  - [x] should return a 200 status and all customers
+  - [x] should return a 404 status when there is no customer
+  - [x] should return a 500 status when getCustomers throws an error
+- sendUpdateCustomerRes tests
+  - [x] should send a 202 status when a valid ID and customer are provided
+  - [x] should return a 404 status when customer is not found
+  - [x] should send a 500 status when updateCustomer throws an error
+- sendDeleteCustomerRes tests
+  - [x] should send a 200 status when a valid ID is provided
+  - [x] should return a 404 status when customer is not found
+  - [x] should send a 500 status when deleteCustomer throws an error
 
 **Integration tests**
 
@@ -123,6 +165,51 @@ Manage Enquiries - "/enq"
   - Tests after successful login
     - [x] should send a 200 status when enquiry is deleted
     - [x] should send a 404 status when enquiry ID is not found
+    - [x] should send a 500 status when there is an error
+  - Tests without logging in
+    - [x] should return a 403 status when no token is provided
+    - [x] should return a 401 status when an invalid token is provided
+- POST requests to '/customers/add' on customerRoutes
+  - Tests after successful login
+    - [x] should send a 201 status when customer is added
+    - [x] should send a 400 status when an empty customer is sent
+    - [x] should send a 400 status when first name is missing
+    - [x] should send a 400 status when preferred name is missing
+    - [x] should send a 400 status when last name is missing
+    - [x] should send a 400 status when mobile is missing
+    - [x] should send a 400 status when email is missing
+    - [x] should send a 400 status when email is invalid
+    - [x] should send a 400 status when first line of address is missing
+    - [x] should send a 400 status when first line of address is invalid
+    - [x] should send a 400 status when postcode is missing
+    - [x] should send a 400 status when postcode is invalid
+    - [x] should send a 400 status when driving licence number is missing
+    - [x] should send a 400 status when driving licence number is invalid
+    - [x] should send a 400 status when enquiries are invalid
+    - [x] should send a 500 status when there is an error
+  - Tests without logging in
+    - [x] should return a 403 status when no token is provided
+    - [x] should return a 401 status when an invalid token is provided
+- GET requests to '/customers/all' on customerRoutes
+  - Tests after successful login
+    - [x] should send a 200 status when there are customers
+    - [x] should send a 404 status when no customer is found
+  - Tests without logging in
+    - [x] should return a 403 status when no token is provided
+    - [x] should return a 401 status when an invalid token is provided
+- PATCH requests to '/customers/:id' on customerRoutes
+  - Tests after successful login
+    - [x] should send a 202 status when customer is updated
+    - [x] should send a 404 status when customer ID is not found
+    - [x] should send a 400 status when an invalid customer is provided
+    - [x] should send a 500 status when there is an error
+  - Tests without logging in
+    - [x] should return a 403 status when no token is provided
+    - [x] should return a 401 status when an invalid token is provided
+- DELETE requests to '/customers/:id' on customerRoutes
+  - Tests after successful login
+    - [x] should send a 200 status when customer is deleted
+    - [x] should send a 404 status when customer ID is not found
     - [x] should send a 500 status when there is an error
   - Tests without logging in
     - [x] should return a 403 status when no token is provided

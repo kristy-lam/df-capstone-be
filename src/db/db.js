@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import loadConfig from "../config/config.js";
 import Enq from "../models/enq.model.js";
 import User from "../models/user.model.js";
+import Customer from "../models/customer.model.js";
 
 loadConfig;
 
@@ -13,6 +14,7 @@ db.mongoose = mongoose;
 
 db.enq = Enq;
 db.user = User;
+db.customer = Customer;
 
 const connectToDatabase = async () => {
   try {
